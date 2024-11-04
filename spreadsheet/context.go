@@ -10,8 +10,8 @@ package spreadsheet
 import (
 	"fmt"
 
-	"github.com/carmel/gooxml/spreadsheet/formula"
-	"github.com/carmel/gooxml/spreadsheet/reference"
+	"github.com/clearmann/gooxml/spreadsheet/formula"
+	"github.com/clearmann/gooxml/spreadsheet/reference"
 )
 
 func newEvalContext(s *Sheet) *evalContext {

@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"fmt"
 
-	"github.com/carmel/gooxml"
+	"github.com/clearmann/gooxml"
 )
 
 type CT_NumData struct {

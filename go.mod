@@ -1,3 +1,3 @@
-module github.com/carmel/gooxml
+module github.com/clearmann/gooxml
 
 go 1.13

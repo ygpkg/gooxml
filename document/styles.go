@@ -10,10 +10,10 @@ package document
 import (
 	"fmt"
 
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/measurement"
-	"github.com/carmel/gooxml/schema/soo/ofc/sharedTypes"
-	"github.com/carmel/gooxml/schema/soo/wml"
+	"github.com/clearmann/gooxml"
+	"github.com/clearmann/gooxml/measurement"
+	"github.com/clearmann/gooxml/schema/soo/ofc/sharedTypes"
+	"github.com/clearmann/gooxml/schema/soo/wml"
 )
 
 // Styles is the document wide styles contained in styles.xml.

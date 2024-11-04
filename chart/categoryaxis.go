@@ -8,10 +8,10 @@
 package chart
 
 import (
-	"github.com/carmel/gooxml/color"
-	"github.com/carmel/gooxml/drawing"
-	"github.com/carmel/gooxml/schema/soo/dml"
-	crt "github.com/carmel/gooxml/schema/soo/dml/chart"
+	"github.com/clearmann/gooxml/color"
+	"github.com/clearmann/gooxml/drawing"
+	"github.com/clearmann/gooxml/schema/soo/dml"
+	crt "github.com/clearmann/gooxml/schema/soo/dml/chart"
 )
 
 type CategoryAxis struct {

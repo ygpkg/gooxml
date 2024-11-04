@@ -12,7 +12,7 @@ package chart
 import (
 	"encoding/xml"
 
-	"github.com/carmel/gooxml"
+	"github.com/clearmann/gooxml"
 )
 
 type CT_AxDataSourceChoice struct {

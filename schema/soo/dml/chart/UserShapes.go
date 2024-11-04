@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"fmt"
 
-	"github.com/carmel/gooxml/schema/soo/dml/chartDrawing"
+	"github.com/clearmann/gooxml/schema/soo/dml/chartDrawing"
 )
 
 type UserShapes struct {

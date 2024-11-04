@@ -8,8 +8,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/carmel/gooxml/spreadsheet"
-	"github.com/carmel/gooxml/spreadsheet/reference"
+	"github.com/clearmann/gooxml/spreadsheet"
+	"github.com/clearmann/gooxml/spreadsheet/reference"
 )
 
 func main() {

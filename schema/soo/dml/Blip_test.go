@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/carmel/gooxml/schema/soo/dml"
+	"github.com/clearmann/gooxml/schema/soo/dml"
 )
 
 func TestBlipConstructor(t *testing.T) {

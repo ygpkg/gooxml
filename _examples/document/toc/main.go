@@ -2,9 +2,9 @@
 package main
 
 import (
-	"github.com/carmel/gooxml/document"
-	"github.com/carmel/gooxml/measurement"
-	"github.com/carmel/gooxml/schema/soo/wml"
+	"github.com/clearmann/gooxml/document"
+	"github.com/clearmann/gooxml/measurement"
+	"github.com/clearmann/gooxml/schema/soo/wml"
 )
 
 var lorem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis, lectus dictum feugiat tempus, sem neque finibus enim, sed eleifend sem nunc ac diam. Vestibulum tempus sagittis elementum`

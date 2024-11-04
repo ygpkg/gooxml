@@ -4,9 +4,9 @@ package main
 import (
 	"log"
 
-	"github.com/carmel/gooxml/color"
-	"github.com/carmel/gooxml/schema/soo/sml"
-	"github.com/carmel/gooxml/spreadsheet"
+	"github.com/clearmann/gooxml/color"
+	"github.com/clearmann/gooxml/schema/soo/sml"
+	"github.com/clearmann/gooxml/spreadsheet"
 )
 
 func main() {

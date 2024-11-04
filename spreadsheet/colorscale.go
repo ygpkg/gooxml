@@ -8,9 +8,9 @@
 package spreadsheet
 
 import (
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/color"
-	"github.com/carmel/gooxml/schema/soo/sml"
+	"github.com/clearmann/gooxml"
+	"github.com/clearmann/gooxml/color"
+	"github.com/clearmann/gooxml/schema/soo/sml"
 )
 
 // ColorScale colors a cell background based off of the cell value.

@@ -10,9 +10,9 @@ package document
 import (
 	"log"
 
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/measurement"
-	"github.com/carmel/gooxml/schema/soo/wml"
+	"github.com/clearmann/gooxml"
+	"github.com/clearmann/gooxml/measurement"
+	"github.com/clearmann/gooxml/schema/soo/wml"
 )
 
 // Section is the beginning of a new section.

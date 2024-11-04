@@ -12,8 +12,8 @@ package chart
 import (
 	"encoding/xml"
 
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/schema/soo/dml"
+	"github.com/clearmann/gooxml"
+	"github.com/clearmann/gooxml/schema/soo/dml"
 )
 
 type CT_ChartSpace struct {

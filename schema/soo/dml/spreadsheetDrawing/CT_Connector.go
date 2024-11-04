@@ -14,8 +14,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/schema/soo/dml"
+	"github.com/clearmann/gooxml"
+	"github.com/clearmann/gooxml/schema/soo/dml"
 )
 
 type CT_Connector struct {

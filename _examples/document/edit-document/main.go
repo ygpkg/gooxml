@@ -7,7 +7,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/carmel/gooxml/document"
+	"github.com/clearmann/gooxml/document"
 )
 
 func main() {

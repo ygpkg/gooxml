@@ -11,7 +11,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/carmel/gooxml"
+	"github.com/clearmann/gooxml"
 )
 
 //go:generate goyacc -l -o grammar.go  grammar.y

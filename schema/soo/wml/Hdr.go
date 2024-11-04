@@ -12,8 +12,8 @@ package wml
 import (
 	"encoding/xml"
 
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/schema/soo/ofc/math"
+	"github.com/clearmann/gooxml"
+	"github.com/clearmann/gooxml/schema/soo/ofc/math"
 )
 
 type Hdr struct {
