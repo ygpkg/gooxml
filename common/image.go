@@ -11,6 +11,8 @@ import (
 	"bytes"
 	"fmt"
 	"image"
+	"io"
+	"net/http"
 	"os"
 
 	"github.com/clearmann/gooxml/measurement"
@@ -115,6 +117,36 @@ func ImageFromFile(path string) (Image, error) {
 // construct an Image directly if the file and size are known.
 func ImageFromBytes(data []byte) (Image, error) {
 	r := Image{}
+	imgDec, ifmt, err := image.Decode(bytes.NewReader(data))
+	if err != nil {
+		return r, fmt.Errorf("unable to parse image: %s", err)
+	}
+
+	r.Data = &data
+	r.Format = ifmt
+	r.Size = imgDec.Bounds().Size()
+	return r, nil
+}
+
+// ImageFromURL reads an image from a URL. It downloads the image, determines
+// its format and size, and returns an Image struct.
+func ImageFromURL(url string) (Image, error) {
+	r := Image{}
+
+	// Download the image from the URL
+	resp, err := http.Get(url)
+	if err != nil {
+		return r, fmt.Errorf("error downloading image: %s", err)
+	}
+	defer resp.Body.Close()
+
+	// Read the image data into a byte slice
+	data, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return r, fmt.Errorf("error reading image data: %s", err)
+	}
+
+	// Decode the image to determine its format and size
 	imgDec, ifmt, err := image.Decode(bytes.NewReader(data))
 	if err != nil {
 		return r, fmt.Errorf("unable to parse image: %s", err)

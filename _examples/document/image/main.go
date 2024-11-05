@@ -29,12 +29,17 @@ func main() {
 	if err != nil {
 		log.Fatalf("unable to create image: %s", err)
 	}
+	img3, err := common.ImageFromURL("https://test-ccnerf-1251908240.cos.ap-beijing.myqcloud.com/user/avatar/20241023-21-rS20F82/6d46ff86dfd449a7116f8acdc18a867.png")
 
 	img1ref, err := doc.AddImage(img1)
 	if err != nil {
 		log.Fatalf("unable to add image to document: %s", err)
 	}
 	img2ref, err := doc.AddImage(img2)
+	if err != nil {
+		log.Fatalf("unable to add image to document: %s", err)
+	}
+	img3ref, err := doc.AddImage(img3)
 	if err != nil {
 		log.Fatalf("unable to add image to document: %s", err)
 	}
@@ -71,5 +76,10 @@ func main() {
 			inl.SetSize(1*measurement.Inch, 1*measurement.Inch)
 		}
 	}
+	inl, err := run.AddDrawingInline(img3ref)
+	if err != nil {
+		log.Fatalf("unable to add inline image: %s", err)
+	}
+	inl.SetSize(1*measurement.Inch, 1*measurement.Inch)
 	doc.SaveToFile("image.docx")
 }
