@@ -21,23 +21,23 @@ func main() {
 	para = doc.AddParagraph()
 	para.SetStyle("Heading1")
 	run = para.AddRun()
-	run.AddText("Some Heading Text")
+	run.AddText("一级标题")
 
 	para = doc.AddParagraph()
 	para.SetStyle("Heading2")
 	run = para.AddRun()
-	run.AddText("Some Heading Text")
+	run.AddText("二级标题")
 
 	para = doc.AddParagraph()
 	para.SetStyle("Heading3")
 	run = para.AddRun()
-	run.AddText("Some Heading Text")
+	run.AddText("三级标题")
 
 	para = doc.AddParagraph()
 	para.Properties().SetFirstLineIndent(0.5 * measurement.Inch)
 
 	run = para.AddRun()
-	run.AddText("A run is a string of characters with the same formatting. ")
+	run.AddText("缩进文本 A run is a string of characters with the same formatting. ")
 
 	run = para.AddRun()
 	run.Properties().SetBold(true)

@@ -22,6 +22,7 @@ func main() {
 
 	// double spaced is twice the text height (24 points in this case as the text height is 12 points)
 	para = doc.AddParagraph()
+	// 正文段落行间距18磅
 	para.Properties().Spacing().SetLineSpacing(24*measurement.Point, wml.ST_LineSpacingRuleAuto)
 	run = para.AddRun()
 	run.AddText(lorem)
