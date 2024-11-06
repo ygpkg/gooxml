@@ -29,7 +29,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("unable to create image: %s", err)
 	}
-	img3, err := common.ImageFromURL("https://test-ccnerf-1251908240.cos.ap-beijing.myqcloud.com/user/avatar/20241023-21-rS20F82/6d46ff86dfd449a7116f8acdc18a867.png")
+	img3, err := common.ImageFromURL("https://test-ccnerf-1251908240.cos.ap-beijing.myqcloud.com/user/general/20241105-21-IZwqAc5/Capture001.png")
 
 	img1ref, err := doc.AddImage(img1)
 	if err != nil {

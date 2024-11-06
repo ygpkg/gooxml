@@ -11,11 +11,14 @@ import (
 	"bytes"
 	"fmt"
 	"image"
+	"image/jpeg"
+	"image/png"
 	"io"
 	"net/http"
 	"os"
 
 	"github.com/clearmann/gooxml/measurement"
+
 	// Add image format support
 	_ "image/gif"
 	_ "image/jpeg"
@@ -151,8 +154,24 @@ func ImageFromURL(url string) (Image, error) {
 	if err != nil {
 		return r, fmt.Errorf("unable to parse image: %s", err)
 	}
-
-	r.Data = &data
+	// Encode the image back to a byte slice with optimized compression
+	var buf bytes.Buffer
+	switch ifmt {
+	case "jpeg":
+		// Use the standard JPEG encoder with specified quality
+		err = jpeg.Encode(&buf, imgDec, &jpeg.Options{Quality: 50})
+	case "png":
+		// Use the standard PNG encoder with default compression
+		err = png.Encode(&buf, imgDec)
+	default:
+		return r, fmt.Errorf("unsupported image format: %s", ifmt)
+	}
+	if err != nil {
+		return r, fmt.Errorf("error encoding image: %s", err)
+	}
+	// Update the image data
+	compressedData := buf.Bytes()
+	r.Data = &compressedData
 	r.Format = ifmt
 	r.Size = imgDec.Bounds().Size()
 	return r, nil
