@@ -3,7 +3,6 @@ package main
 
 import (
 	"log"
-	"math/rand"
 
 	"github.com/clearmann/gooxml/color"
 	"github.com/clearmann/gooxml/schema/soo/sml"
@@ -21,13 +20,13 @@ func main() {
 		row := sheet.AddRow()
 		for c := 0; c < 5; c++ {
 			cell := row.AddCell()
-			cell.SetNumber(float64(rand.Intn(1000)) / 100.0)
+			cell.SetString("cell")
 		}
 	}
 	{
-		cfmt := sheet.AddConditionalFormatting([]string{"A1:E5"})
+		cfmt := sheet.AddConditionalFormatting([]string{"A1:E1"})
 		r := cfmt.AddRule()
-		// cell is
+		//cell is
 		r.SetType(sml.ST_CfTypeCellIs)
 		// greater than
 		r.SetOperator(sml.ST_ConditionalFormattingOperatorLessThan)
@@ -35,6 +34,7 @@ func main() {
 		r.SetConditionValue("4")
 		// should be formatted with this style
 		green := ss.StyleSheet.AddDifferentialStyle()
+		// 如果插入的值为string的话，需要设置为 color.Green
 		green.Fill().SetPatternFill().SetBgColor(color.SuccessGreen)
 		r.SetStyle(green)
 
@@ -85,5 +85,5 @@ func main() {
 		log.Fatalf("error validating sheet: %s", err)
 	}
 
-	ss.SaveToFile("conditional-formatting.xlsx")
+	ss.SaveToFile("clearmann_test.xlsx")
 }
