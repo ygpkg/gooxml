@@ -5,7 +5,7 @@ so I used the original repository of the code , for secondary development 、 re
 、add some needed features.
 
 
-特别感谢原作者提供的开源库：https://github.com/carmel/gooxml。 由于原始仓库不在维护,无法通过提交代码的
+特别感谢原作者提供的开源库：https://github.com/carmel/gooxml 由于原始仓库不在维护,无法通过提交代码的
 方式修复原始仓库中存在的问题，因此我使用了原始仓库的代码，进行二次开发、修复一些可能存在的bug、增加一些需要的功能.
 
 
