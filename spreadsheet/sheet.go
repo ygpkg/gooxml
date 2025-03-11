@@ -51,6 +51,27 @@ func (s Sheet) Row(rowNum uint32) Row {
 	return s.AddNumberedRow(rowNum)
 }
 
+// 从 1 开始计算
+func indexToColName(row, col int) string {
+	if col <= 0 {
+		return ""
+	}
+	var result string
+	for col > 0 {
+		col--
+		result = string(rune('A'+col%26)) + result
+		col = col / 26
+	}
+	result += fmt.Sprintf("%d", row)
+	return result
+}
+
+// CellWithRowCol 给定 row 行 col 列，创建或返回一个给定单元格引用形式为“A10”的单元格
+// !!! 注意：row 和 col 从 1 开始计算
+func (s Sheet) CellWithRowCol(row, col int) Cell {
+	return s.Cell(indexToColName(row, col))
+}
+
 // Cell creates or returns a cell given a cell reference of the form 'A10'
 func (s Sheet) Cell(cellRef string) Cell {
 	cref, err := reference.ParseCellReference(cellRef)
