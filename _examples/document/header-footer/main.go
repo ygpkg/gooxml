@@ -22,6 +22,7 @@ func main() {
 	hdr := doc.AddHeader()
 	// We need to add a reference of the image to the header instead of to the
 	// document
+	// 将图片加入到 header 中
 	iref, err := hdr.AddImage(img)
 	if err != nil {
 		log.Fatalf("unable to to add image to document: %s", err)
@@ -38,6 +39,7 @@ func main() {
 
 	// Headers and footers are not immediately associated with a document as a
 	// document can have multiple headers and footers for different sections.
+	// 页眉和页脚并不立即与文档相关联，因为文档可以具有用于不同部分的多个页眉和页脚。
 	doc.BodySection().SetHeader(hdr, wml.ST_HdrFtrDefault)
 
 	ftr := doc.AddFooter()

@@ -10,7 +10,10 @@ package document
 import (
 	"bytes"
 	"errors"
+	"fmt"
 	"math/rand"
+	"regexp"
+	"strings"
 
 	"github.com/clearmann/gooxml"
 	"github.com/clearmann/gooxml/common"
@@ -54,7 +57,45 @@ func (r Run) ClearContent() {
 	r.x.EG_RunInnerContent = nil
 }
 
-// AddText adds tet to a run.
+// AddLatexText 添加包含 Latex 公式的文本
+func (r Run) AddLatexText(s string) {
+	if strings.Contains(s, "$") {
+		re := regexp.MustCompile(`\$(.*?)\$`)
+		matches := re.FindAllStringSubmatchIndex(s, -1)
+
+		lastEnd := 0
+		for _, match := range matches {
+			if match[0] > lastEnd {
+				r.AddText(s[lastEnd:match[0]])
+			}
+
+			latex := s[match[2]:match[3]]
+			if omml, err := LatexToOMML(latex); err == nil {
+				ic := r.newIC()
+				ic.T = wml.NewCT_Text()
+				ic.T.Content = fmt.Sprintf(`<p xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+					<m:oMathPara>
+						<m:oMath>
+							%s
+						</m:oMath>
+					</m:oMathPara>
+				</p>`, omml)
+				r.Properties().SetMath(true)
+			}
+
+			lastEnd = match[1]
+		}
+
+		if lastEnd < len(s) {
+			r.AddText(s[lastEnd:])
+		}
+	} else {
+		r.AddText(s)
+	}
+
+}
+
+// AddText adds text to a run.
 func (r Run) AddText(s string) {
 	ic := wml.NewEG_RunInnerContent()
 	r.x.EG_RunInnerContent = append(r.x.EG_RunInnerContent, ic)
@@ -110,6 +151,18 @@ func (r Run) AddFieldWithFormatting(code string, fmt string, isDirty bool) {
 // AddField adds a field (automatically computed text) to the document.
 func (r Run) AddField(code string) {
 	r.AddFieldWithFormatting(code, "", true)
+}
+
+// SetMath 设置运行块为数学公式模式
+func (r RunProperties) SetMath(hasMath bool) {
+	if hasMath {
+		if r.x.OMath == nil {
+			r.x.OMath = wml.NewCT_OnOff()
+		}
+		r.x.OMath.ValAttr = &sharedTypes.ST_OnOff{Bool: gooxml.Bool(true)}
+	} else {
+		r.x.OMath = nil
+	}
 }
 
 // Properties returns the run properties.

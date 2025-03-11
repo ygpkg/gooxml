@@ -97,6 +97,7 @@ func (d *Document) X() *wml.Document {
 
 // AddHeader creates a header associated with the document, but doesn't add it
 // to the document for display.
+// AddHeader 创建与文档关联的页眉，但不会将其添加到文档中以供显示
 func (d *Document) AddHeader() Header {
 	hdr := wml.NewHdr()
 	d.headers = append(d.headers, hdr)
@@ -110,6 +111,7 @@ func (d *Document) AddHeader() Header {
 }
 
 // Headers returns the headers defined in the document.
+// Headers 返回文档中定义的标题
 func (d *Document) Headers() []Header {
 	ret := []Header{}
 	for _, h := range d.headers {
@@ -144,6 +146,7 @@ func (d *Document) AddFooter() Footer {
 // BodySection returns the default body section used for all preceding
 // paragraphs until the previous Section. If there is no previous sections, the
 // body section applies to the entire document.
+// BodySection 返回用于所有前面段落（直到上一节）的默认正文部分。如果没有前面的部分，则正文部分适用于整个文档。
 func (d *Document) BodySection() Section {
 	if d.x.Body.SectPr == nil {
 		d.x.Body.SectPr = wml.NewCT_SectPr()

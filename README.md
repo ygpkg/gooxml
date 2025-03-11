@@ -4,9 +4,8 @@ can not repair the original repository by submitting the code in the way of prob
 so I used the original repository of the code , for secondary development 、 repairfeat some of the possible bugs 
 、add some needed features.
 
-
 特别感谢原作者提供的开源库：https://github.com/carmel/gooxml 由于原始仓库不在维护,无法通过提交代码的
-方式修复原始仓库中存在的问题，因此我使用了原始仓库的代码，进行二次开发、修复一些可能存在的bug、增加一些需要的功能.
+方式修复原始仓库中存在的问题，因此我使用了原始仓库的代码，进行二次开发、修复一些可能存在的bug、增加一些需要的功能。
 
 
 
@@ -64,32 +63,32 @@ DOCX/XLSX/PPTX.
 
     go get github.com/clearmann/gooxml
 
-## Document Examples ##
+## Docx 文档示例 ##
 
-- [Simple Text Formatting](https://github.com/clearmann/gooxml/tree/master/_examples/document/simple) Text font colors, sizes, highlighting, etc.
-- [Auto Generated Table of Contents](https://github.com/clearmann/gooxml/tree/master/_examples/document/toc) Creating document headings with an auto generated TOC based off of the headingds
-- [Floating Image](https://github.com/clearmann/gooxml/tree/master/_examples/document/image) Placing an image somewhere on a page, absolutely positioned with different text wrapping.
-- [Header & Footer](https://github.com/clearmann/gooxml/tree/master/_examples/document/header-footer) Creating headers and footers including page numbering.
-- [Multiple Headers & Footers](https://github.com/clearmann/gooxml/tree/master/_examples/document/header-footer-multiple) Using different headers and footers depending on document section.
-- [Inline Tables](https://github.com/clearmann/gooxml/tree/master/_examples/document/tables) Adding an table with and without borders.
-- [Using Existing Word Document as a Template](https://github.com/clearmann/gooxml/tree/master/_examples/document/use-template) Opening a document as a template to re-use the styles created in the document.
-- [Filling out Form Fields](https://github.com/clearmann/gooxml/tree/master/_examples/document/fill-out-form) Opening a document with embedded form fields, filling out the fields and saving the result as  a new filled form.
-- [Editing an existing document](https://github.com/clearmann/gooxml/tree/master/_examples/document/edit-document) Open an existing document and replace/remove text without modifying formatting.
+- [简单文本格式](https://github.com/clearmann/gooxml/tree/master/_examples/document/simple) 文本字体颜色、大小、高亮显示等
+- [自动生成目录](https://github.com/clearmann/gooxml/tree/master/_examples/document/toc) 创建文档标题，并基于标题自动生成目录
+- [图像处理](https://github.com/clearmann/gooxml/tree/master/_examples/document/image) 在页面上绝对定位图像，支持不同文字环绕方式
+- [页眉页脚](https://github.com/clearmann/gooxml/tree/master/_examples/document/header-footer) 创建包含页码的页眉和页脚
+- [多重页眉页脚](https://github.com/clearmann/gooxml/tree/master/_examples/document/header-footer-multiple) 根据文档章节使用不同的页眉页脚
+- [内联表格](https://github.com/clearmann/gooxml/tree/master/_examples/document/tables) 添加带边框和不带边框的表格
+- [使用现有Word文档作为模板](https://github.com/clearmann/gooxml/tree/master/_examples/document/use-template) 打开文档作为模板以复用其中的样式
+- [填写表单字段](https://github.com/clearmann/gooxml/tree/master/_examples/document/fill-out-form) 打开包含嵌入式表单字段的文档，填写字段并将结果另存为已填写的新表单
+- [编辑现有文档](https://github.com/clearmann/gooxml/tree/master/_examples/document/edit-document) 打开现有文档并替换/删除文本，同时保持原有格式不变
 
-## Spreadsheet Examples ##
-- [Simple](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/simple) A simple sheet with a few cells
-- [Named Cells](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/named-cells) Different ways of referencing rows and cells
-- [Cell Number/Date/Time Formats](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/number-date-time-formats) Creating cells with various number/date/time formats
-- [Line Chart](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/line-chart)/[Line Chart 3D](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/line-chart-3d) Line Charts
-- [Bar Chart](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/bar-chart) Bar Charts
-- [Mutiple Charts](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/multiple-charts) Multiple charts on a single sheet
-- [Named Cell Ranges](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/named-ranges) Naming cell ranges
-- [Merged Cells](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/merged) Merge and unmerge cells
-- [Conditional Formatting](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/conditional-formatting) Conditionally formatting cells, styling, gradients, icons, data bar
-- [Complex](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/complex) Multiple charts, auto filtering and conditional formatting
-- [Borders](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/borders) Individual cell borders and rectangular borders around a range of cells.
-- [Validation](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/validation) Data validation including combo box dropdowns.
-- [Frozen Rows/Cols](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/freeze-rows-cols) A sheet with a frozen header column and row
+## Excel 文档示例 ##
+- [简单excel表格](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/simple) 包含少量单元格的简单工作表
+- [命名单元格](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/named-cells) 行列和单元格的不同引用方式
+- [数字/日期/时间格式](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/number-date-time-formats) 设置多种数字/日期/时间格式的单元格
+- [折线图](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/line-chart)/[3D折线图](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/line-chart-3d) 折线图绘制示例
+- [柱状图](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/bar-chart) 柱状图绘制示例
+- [多图表布局](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/multiple-charts) 单工作表中创建多个图表
+- [命名单元格区域](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/named-ranges) 定义单元格区域名称
+- [合并单元格](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/merged) 合并与取消合并单元格
+- [条件格式](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/conditional-formatting) 条件格式设置（样式/渐变色/图标集/数据条）
+- [综合应用](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/complex) 多图表、自动筛选与条件格式的组合应用
+- [单元格边框](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/borders) 单个单元格边框和单元格区域矩形边框设置
+- [数据验证](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/validation) 包含组合框下拉列表的数据验证
+- [冻结行列](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/freeze-rows-cols) 冻结表头行和列的视图设置
 
 ## Presentation Examples ##
 
