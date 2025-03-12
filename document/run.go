@@ -107,6 +107,15 @@ func (r Run) AddText(s string) {
 	ic.T.Content = s
 }
 
+// AddMultiLineText adds multi line text to a run.
+func (r Run) AddMultiLineText(s string) {
+	lines := strings.Split(s, "\n")
+	for _, line := range lines {
+		r.AddText(line)
+		r.AddBreak()
+	}
+}
+
 func (r Run) newIC() *wml.EG_RunInnerContent {
 	ic := wml.NewEG_RunInnerContent()
 	r.x.EG_RunInnerContent = append(r.x.EG_RunInnerContent, ic)

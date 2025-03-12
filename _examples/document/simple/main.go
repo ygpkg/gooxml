@@ -16,7 +16,11 @@ func main() {
 	para := doc.AddParagraph()
 	run := para.AddRun()
 	para.SetStyle("Title")
-	run.AddText("Simple Document Formatting")
+	run.AddText("Simple Document\n Formatting")
+	run.AddBreak()
+	run.AddMultiLineText("Simple Document\n Formatting")
+	run.AddBreak()
+	run.AddText("Simple Document\n Formatting")
 
 	para = doc.AddParagraph()
 	para.SetStyle("Heading1")
@@ -37,7 +41,7 @@ func main() {
 	para.Properties().SetFirstLineIndent(0.5 * measurement.Inch)
 
 	run = para.AddRun()
-	run.AddText("缩进文本 A run is a string of characters with the same formatting. ")
+	run.AddText("缩进文本 A run is a string\r\n of characters with the same formatting. ")
 
 	run = para.AddRun()
 	run.Properties().SetBold(true)
@@ -47,7 +51,7 @@ func main() {
 	run.AddText("Multiple runs with different formatting can exist in the same paragraph. ")
 
 	run = para.AddRun()
-	run.AddText("Adding breaks to a run will insert line breaks after the run. ")
+	run.AddText("Adding breaks \nto a run will insert line breaks after the run. ")
 	run.AddBreak()
 	run.AddBreak()
 
@@ -92,7 +96,7 @@ func main() {
 		run := p.AddRun()
 		run.AddText(fmt.Sprintf("Level %d", i))
 	}
-	doc.SaveToFile("simple.docx")
+	doc.SaveToFile("simple2.docx")
 }
 
 func createParaRun(doc *document.Document, s string) document.Run {
