@@ -461,6 +461,13 @@ func (s Sheet) Extents() string {
 	return fmt.Sprintf("%s%d:%s%d", sc, sr, ec, er)
 }
 
+// AddConditionalFormattingWithStartEnd adds conditional formatting to the sheet.
+// !!! 注意：row 和 col 从 1 开始计算
+func (s Sheet) AddConditionalFormattingWithStartEnd(startRow, startCol, endRow, endCol int) ConditionalFormatting {
+	r := fmt.Sprintf("%s:%s", indexToColName(startRow, startCol), indexToColName(endRow, endCol))
+	return s.AddConditionalFormatting([]string{r})
+}
+
 // AddConditionalFormatting adds conditional formatting to the sheet.
 func (s Sheet) AddConditionalFormatting(cellRanges []string) ConditionalFormatting {
 	cfmt := sml.NewCT_ConditionalFormatting()
