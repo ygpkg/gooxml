@@ -2,14 +2,17 @@
 package main
 
 import (
+	"github.com/clearmann/gooxml/color"
 	"github.com/clearmann/gooxml/document"
 	"github.com/clearmann/gooxml/measurement"
 	"github.com/clearmann/gooxml/schema/soo/wml"
 )
 
-var lorem = `Lorem ipsum dolor sit amet, Vestibulum tempus sagittis elementum`
+// "github.com/clearmann/gooxml/color"
+var lorem = `Lorem ipsum dolor sit amet, Vestibulum t反反复复反反复复凤飞飞发发发344444444444444444444444444444444444442GVvvvvvvvvvvvvvvvvvvv了解覅额黑白 问佛嗯empus sagittis elementum`
 
 func main() {
+
 	doc := document.New()
 	var hdr document.Header
 	setHeader := func(text string) {
@@ -19,20 +22,24 @@ func main() {
 		run := para.AddRun()
 		run.AddTab()
 		run.AddText(text)
+
+		borderPara := hdr.AddParagraph()
+		borderPara.Properties().SetStyle("Normal")
+		borderPara.Properties().SetBottomBorder(wml.ST_BorderThick, color.Auto, 1*measurement.Point)
 	}
 	serSection := func() {
 		para := doc.AddParagraph()
 		section := para.Properties().AddSection(wml.ST_SectionMarkNextPage)
 		section.SetHeader(hdr, wml.ST_HdrFtrDefault)
 	}
-	for i := 0; i < 1; i++ {
+	for i := 0; i < 10; i++ {
 		para := doc.AddParagraph()
 		run := para.AddRun()
 		run.AddText(lorem)
 	}
 	setHeader("My Document Title")
 	serSection()
-	for i := 0; i < 2; i++ {
+	for i := 0; i < 20; i++ {
 		para := doc.AddParagraph()
 		run := para.AddRun()
 		run.AddText(lorem)
@@ -40,7 +47,7 @@ func main() {
 	setHeader("Different Title1")
 	serSection()
 
-	for i := 0; i < 3; i++ {
+	for i := 0; i < 30; i++ {
 		para := doc.AddParagraph()
 		run := para.AddRun()
 		run.AddText(lorem)

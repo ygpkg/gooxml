@@ -8,7 +8,7 @@ import (
 
 func main() {
 	doc := document.New()
-	doc.AddStyleLine(wml.ST_BorderThick)
+	doc.AddBlackLine(wml.ST_BorderThick)
 
 	para := doc.AddParagraph()
 	run := para.AddRun()
