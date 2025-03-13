@@ -20,7 +20,9 @@ import (
 	"strings"
 
 	"github.com/clearmann/gooxml"
+	"github.com/clearmann/gooxml/color"
 	"github.com/clearmann/gooxml/common"
+	"github.com/clearmann/gooxml/measurement"
 	"github.com/clearmann/gooxml/zippkg"
 
 	"github.com/clearmann/gooxml/schema/soo/dml"
@@ -88,6 +90,24 @@ func New() *Document {
 
 	d.x.Body = wml.NewCT_Body()
 	return d
+}
+func (d *Document) AddBlackLine(lineStyle wml.ST_Border) {
+	table := d.AddTable()
+	table.Properties().SetWidthPercent(100)
+	borders := table.Properties().Borders()
+	borders.SetTop(lineStyle, color.Auto, 1*measurement.Point)
+
+	row := table.AddRow()
+	row.AddCell().AddParagraph().AddRun()
+}
+func (d *Document) AddStyleLine(lineStyle wml.ST_Border, lineColor color.Color) {
+	table := d.AddTable()
+	table.Properties().SetWidthPercent(100)
+	borders := table.Properties().Borders()
+	borders.SetTop(lineStyle, lineColor, 1*measurement.Point)
+
+	row := table.AddRow()
+	row.AddCell().AddParagraph().AddRun()
 }
 
 // X returns the inner wrapped XML type.

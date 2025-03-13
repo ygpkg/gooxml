@@ -856,11 +856,13 @@ func (m ST_TextEffect) ValidateWithPath(path string) error {
 type ST_Border byte
 
 const (
-	ST_BorderUnset                  ST_Border = 0
-	ST_BorderNil                    ST_Border = 1
-	ST_BorderNone                   ST_Border = 2
-	ST_BorderSingle                 ST_Border = 3
-	ST_BorderThick                  ST_Border = 4
+	ST_BorderUnset  ST_Border = 0
+	ST_BorderNil    ST_Border = 1
+	ST_BorderNone   ST_Border = 2
+	ST_BorderSingle ST_Border = 3
+	//
+	ST_BorderThick ST_Border = 4
+	// 双横线
 	ST_BorderDouble                 ST_Border = 5
 	ST_BorderDotted                 ST_Border = 6
 	ST_BorderDashed                 ST_Border = 7
