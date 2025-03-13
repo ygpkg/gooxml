@@ -11,6 +11,7 @@ import (
 	"fmt"
 
 	"github.com/clearmann/gooxml"
+	"github.com/clearmann/gooxml/color"
 	"github.com/clearmann/gooxml/measurement"
 	"github.com/clearmann/gooxml/schema/soo/ofc/sharedTypes"
 	"github.com/clearmann/gooxml/schema/soo/wml"
@@ -20,6 +21,16 @@ import (
 type ParagraphProperties struct {
 	d *Document
 	x *wml.CT_PPr
+}
+
+func (p ParagraphProperties) SetBottomBorder(style wml.ST_Border, clr color.Color, size measurement.Distance) {
+	if p.x.PBdr == nil {
+		p.x.PBdr = wml.NewCT_PBdr()
+	}
+	p.x.PBdr.Bottom = wml.NewCT_Border()
+	sz := uint64(size)
+	p.x.PBdr.Bottom.SzAttr = &sz
+	p.x.PBdr.Bottom.ValAttr = style
 }
 
 // X returns the inner wrapped XML type.
