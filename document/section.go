@@ -21,6 +21,18 @@ type Section struct {
 	x *wml.CT_SectPr
 }
 
+// 定义 PageNumbering 结构体，用于存储页码的起始值
+type PageNumbering struct {
+	Start int
+}
+
+// MakeSection constructs a new section.
+func (s Section) SetPageNumbering(pn PageNumbering) {
+	pageNumber := wml.NewCT_PageNumber()
+	pageNumber.StartAttr = gooxml.Int64(int64(pn.Start))
+	s.x.PgNumType = pageNumber
+}
+
 // X returns the internally wrapped *wml.CT_SectPr.
 func (s Section) X() *wml.CT_SectPr {
 	return s.x

@@ -39,6 +39,7 @@ func main() {
 	}
 	setHeader("My Document Title")
 	serSection()
+
 	for i := 0; i < 20; i++ {
 		para := doc.AddParagraph()
 		run := para.AddRun()
@@ -46,6 +47,19 @@ func main() {
 	}
 	setHeader("Different Title1")
 	serSection()
+	//此处业务场景是,可能在word中间加上一个新的页脚
+	// 创建页脚
+	footer := doc.AddFooter()
+	footerPara := footer.AddParagraph()
+	footerPara.Properties().SetAlignment(wml.ST_JcCenter)
+	footerRun := footerPara.AddRun()
+	footerRun.AddField(document.FieldCurrentPage)
+
+	para := doc.AddParagraph()
+	section := para.Properties().AddSection(wml.ST_SectionMarkContinuous)
+	section.SetFooter(footer, wml.ST_HdrFtrDefault)
+	// 设置页码, 页码默认从 0 开始!!!!
+	section.SetPageNumbering(document.PageNumbering{Start: 0})
 
 	for i := 0; i < 30; i++ {
 		para := doc.AddParagraph()
@@ -53,7 +67,8 @@ func main() {
 		run.AddText(lorem)
 	}
 	setHeader("Different Title2")
-	//此处方法很重要，否则最后一个页眉不会显示，或者有抽象的页面
+	//serSection()
 	doc.BodySection().SetHeader(hdr, wml.ST_HdrFtrDefault)
-	doc.SaveToFile("header-footer-multiple.docx")
+	doc.SaveToFile("simple2.docx")
+
 }
