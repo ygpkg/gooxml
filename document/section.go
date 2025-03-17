@@ -12,6 +12,7 @@ import (
 
 	"github.com/clearmann/gooxml"
 	"github.com/clearmann/gooxml/measurement"
+	"github.com/clearmann/gooxml/schema/soo/ofc/sharedTypes"
 	"github.com/clearmann/gooxml/schema/soo/wml"
 )
 
@@ -77,4 +78,20 @@ func (s Section) SetPageMargins(top, right, bottom, left, header, footer, gutter
 	margins.GutterAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(gutter / measurement.Twips))
 
 	s.x.PgMar = margins
+}
+
+func (section Section) SetLandscapeA4PageSize() {
+	sectPr := section.X()
+	sectPr.PgSz = wml.NewCT_PageSz()
+	sectPr.PgSz.OrientAttr = wml.ST_PageOrientationLandscape
+	// A4：9 A5：11
+	sectPr.PgSz.CodeAttr = gooxml.Int64(9)
+	// 纸张宽高，A4横向长宽为21x29.7cm
+	// 计算为厘米转磅数再乘以20
+	// 长：21 * 28.35 * 20 = 11907
+	// 宽：29.7 * 28.35 * 20 = 16839.9 ≈ 16840
+	sectPr.PgSz.WAttr = &sharedTypes.ST_TwipsMeasure{ST_UnsignedDecimalNumber: gooxml.Uint64(11907)}
+	sectPr.PgSz.HAttr = &sharedTypes.ST_TwipsMeasure{ST_UnsignedDecimalNumber: gooxml.Uint64(16839)}
+	// 页边距只需要厘米转为磅数，即厘米x28.35
+	section.SetPageMargins(72, 54, 72, 54, 42.55, 49.6, 0)
 }
