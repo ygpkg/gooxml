@@ -8,9 +8,9 @@
 package spreadsheet
 
 import (
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/measurement"
-	sd "github.com/clearmann/gooxml/schema/soo/dml/spreadsheetDrawing"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/measurement"
+	sd "github.com/ygpkg/gooxml/schema/soo/dml/spreadsheetDrawing"
 )
 
 // AbsoluteAnchor has a fixed top-left corner in distance units as well as a

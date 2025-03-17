@@ -14,7 +14,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/clearmann/gooxml"
+	"github.com/ygpkg/gooxml"
 )
 
 type WdCT_WrapTopBottom struct {

@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/clearmann/gooxml/schema/soo/dml/chart"
+	"github.com/ygpkg/gooxml/schema/soo/dml/chart"
 )
 
 func TestCT_AxPosConstructor(t *testing.T) {

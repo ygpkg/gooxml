@@ -10,11 +10,11 @@ package vmldrawing
 import (
 	"fmt"
 
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/schema/urn/schemas_microsoft_com/office/excel"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/schema/urn/schemas_microsoft_com/office/excel"
 
-	st "github.com/clearmann/gooxml/schema/soo/ofc/sharedTypes"
-	vml "github.com/clearmann/gooxml/schema/urn/schemas_microsoft_com/vml"
+	st "github.com/ygpkg/gooxml/schema/soo/ofc/sharedTypes"
+	vml "github.com/ygpkg/gooxml/schema/urn/schemas_microsoft_com/vml"
 )
 
 // NewCommentDrawing constructs a new comment drawing.

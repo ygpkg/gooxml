@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"fmt"
 
-	"github.com/clearmann/gooxml/schema/soo/dml"
+	"github.com/ygpkg/gooxml/schema/soo/dml"
 )
 
 type WdCT_EffectExtent struct {

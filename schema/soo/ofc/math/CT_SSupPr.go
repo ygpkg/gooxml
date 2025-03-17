@@ -12,7 +12,7 @@ package math
 import (
 	"encoding/xml"
 
-	"github.com/clearmann/gooxml"
+	"github.com/ygpkg/gooxml"
 )
 
 type CT_SSupPr struct {

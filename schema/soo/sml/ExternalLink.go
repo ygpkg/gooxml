@@ -12,7 +12,7 @@ package sml
 import (
 	"encoding/xml"
 
-	"github.com/clearmann/gooxml"
+	"github.com/ygpkg/gooxml"
 )
 
 type ExternalLink struct {

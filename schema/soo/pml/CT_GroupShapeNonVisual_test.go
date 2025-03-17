@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/clearmann/gooxml/schema/soo/pml"
+	"github.com/ygpkg/gooxml/schema/soo/pml"
 )
 
 func TestCT_GroupShapeNonVisualConstructor(t *testing.T) {

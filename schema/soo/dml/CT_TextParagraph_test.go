@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/clearmann/gooxml/schema/soo/dml"
+	"github.com/ygpkg/gooxml/schema/soo/dml"
 )
 
 func TestCT_TextParagraphConstructor(t *testing.T) {

@@ -14,7 +14,7 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/clearmann/gooxml"
+	"github.com/ygpkg/gooxml"
 )
 
 const ST_CyPattern = `\s*[0-9]*\.[0-9]{4}\s*`

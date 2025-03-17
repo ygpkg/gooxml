@@ -14,7 +14,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/clearmann/gooxml/schema/soo/ofc/sharedTypes"
+	"github.com/ygpkg/gooxml/schema/soo/ofc/sharedTypes"
 )
 
 type CT_ImageData struct {

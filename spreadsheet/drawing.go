@@ -10,16 +10,16 @@ package spreadsheet
 import (
 	"fmt"
 
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/chart"
-	"github.com/clearmann/gooxml/color"
-	"github.com/clearmann/gooxml/common"
-	"github.com/clearmann/gooxml/measurement"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/chart"
+	"github.com/ygpkg/gooxml/color"
+	"github.com/ygpkg/gooxml/common"
+	"github.com/ygpkg/gooxml/measurement"
 
-	"github.com/clearmann/gooxml/schema/soo/dml"
-	c "github.com/clearmann/gooxml/schema/soo/dml/chart"
-	crt "github.com/clearmann/gooxml/schema/soo/dml/chart"
-	sd "github.com/clearmann/gooxml/schema/soo/dml/spreadsheetDrawing"
+	"github.com/ygpkg/gooxml/schema/soo/dml"
+	c "github.com/ygpkg/gooxml/schema/soo/dml/chart"
+	crt "github.com/ygpkg/gooxml/schema/soo/dml/chart"
+	sd "github.com/ygpkg/gooxml/schema/soo/dml/spreadsheetDrawing"
 )
 
 // Drawing is a drawing overlay on a sheet.  Only a single drawing is allowed

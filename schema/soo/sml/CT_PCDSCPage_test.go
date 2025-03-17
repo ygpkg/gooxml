@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/clearmann/gooxml/schema/soo/sml"
+	"github.com/ygpkg/gooxml/schema/soo/sml"
 )
 
 func TestCT_PCDSCPageConstructor(t *testing.T) {

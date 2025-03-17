@@ -8,7 +8,7 @@
 package document
 
 import (
-	"github.com/clearmann/gooxml/schema/soo/wml"
+	"github.com/ygpkg/gooxml/schema/soo/wml"
 )
 
 // Row is a row within a table within a document.

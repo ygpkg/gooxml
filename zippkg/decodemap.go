@@ -11,7 +11,7 @@ import (
 	"archive/zip"
 	"path"
 
-	"github.com/clearmann/gooxml/schema/soo/pkg/relationships"
+	"github.com/ygpkg/gooxml/schema/soo/pkg/relationships"
 )
 
 // OnNewRelationshipFunc is called when a new relationship has been discovered.

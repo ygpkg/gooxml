@@ -7,7 +7,7 @@
 
 package document
 
-import "github.com/clearmann/gooxml/schema/soo/wml"
+import "github.com/ygpkg/gooxml/schema/soo/wml"
 
 // Bookmark is a bookmarked location within a document that can be referenced
 // with a hyperlink.

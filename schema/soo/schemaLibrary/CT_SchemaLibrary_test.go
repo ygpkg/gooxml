@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/clearmann/gooxml/schema/soo/schemaLibrary"
+	"github.com/ygpkg/gooxml/schema/soo/schemaLibrary"
 )
 
 func TestCT_SchemaLibraryConstructor(t *testing.T) {

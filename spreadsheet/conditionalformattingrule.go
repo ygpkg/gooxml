@@ -8,8 +8,8 @@
 package spreadsheet
 
 import (
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/schema/soo/sml"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/schema/soo/sml"
 )
 
 type ConditionalFormattingRule struct {

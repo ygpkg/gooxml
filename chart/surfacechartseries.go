@@ -8,11 +8,11 @@
 package chart
 
 import (
-	"github.com/clearmann/gooxml/color"
-	"github.com/clearmann/gooxml/drawing"
-	"github.com/clearmann/gooxml/measurement"
-	"github.com/clearmann/gooxml/schema/soo/dml"
-	crt "github.com/clearmann/gooxml/schema/soo/dml/chart"
+	"github.com/ygpkg/gooxml/color"
+	"github.com/ygpkg/gooxml/drawing"
+	"github.com/ygpkg/gooxml/measurement"
+	"github.com/ygpkg/gooxml/schema/soo/dml"
+	crt "github.com/ygpkg/gooxml/schema/soo/dml/chart"
 )
 
 type SurfaceChartSeries struct {

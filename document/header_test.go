@@ -10,7 +10,7 @@ package document_test
 import (
 	"testing"
 
-	"github.com/clearmann/gooxml/document"
+	"github.com/ygpkg/gooxml/document"
 )
 
 func TestHeaderRemoveParagraph(t *testing.T) {

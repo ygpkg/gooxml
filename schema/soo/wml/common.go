@@ -16,9 +16,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/schema/soo/dml"
-	"github.com/clearmann/gooxml/schema/soo/ofc/sharedTypes"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/schema/soo/dml"
+	"github.com/ygpkg/gooxml/schema/soo/ofc/sharedTypes"
 )
 
 const ST_TextScalePercentPattern = `0*(600|([0-5]?[0-9]?[0-9]))%`

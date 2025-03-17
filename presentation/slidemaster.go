@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/clearmann/gooxml/common"
-	"github.com/clearmann/gooxml/schema/soo/pml"
+	"github.com/ygpkg/gooxml/common"
+	"github.com/ygpkg/gooxml/schema/soo/pml"
 )
 
 // SlideMaster is the slide master for a presentation.

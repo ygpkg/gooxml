@@ -10,7 +10,7 @@ package spreadsheet
 import (
 	"strconv"
 
-	"github.com/clearmann/gooxml/spreadsheet/reference"
+	"github.com/ygpkg/gooxml/spreadsheet/reference"
 )
 
 // SortOrder is a column sort order.

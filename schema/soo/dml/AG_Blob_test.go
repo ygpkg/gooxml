@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/clearmann/gooxml/schema/soo/dml"
+	"github.com/ygpkg/gooxml/schema/soo/dml"
 )
 
 func TestAG_BlobConstructor(t *testing.T) {

@@ -15,13 +15,13 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/common"
-	"github.com/clearmann/gooxml/measurement"
-	"github.com/clearmann/gooxml/schema/soo/dml"
-	pic "github.com/clearmann/gooxml/schema/soo/dml/picture"
-	"github.com/clearmann/gooxml/schema/soo/ofc/sharedTypes"
-	"github.com/clearmann/gooxml/schema/soo/wml"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/common"
+	"github.com/ygpkg/gooxml/measurement"
+	"github.com/ygpkg/gooxml/schema/soo/dml"
+	pic "github.com/ygpkg/gooxml/schema/soo/dml/picture"
+	"github.com/ygpkg/gooxml/schema/soo/ofc/sharedTypes"
+	"github.com/ygpkg/gooxml/schema/soo/wml"
 )
 
 // Run is a run of text within a paragraph that shares the same formatting.

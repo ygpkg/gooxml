@@ -11,7 +11,7 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/clearmann/gooxml/spreadsheet"
+	"github.com/ygpkg/gooxml/spreadsheet"
 )
 
 func main() {

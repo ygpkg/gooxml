@@ -13,13 +13,13 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/clearmann/gooxml/spreadsheet/formula"
-	"github.com/clearmann/gooxml/spreadsheet/reference"
+	"github.com/ygpkg/gooxml/spreadsheet/formula"
+	"github.com/ygpkg/gooxml/spreadsheet/reference"
 
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/common"
-	"github.com/clearmann/gooxml/schema/soo/sml"
-	"github.com/clearmann/gooxml/vmldrawing"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/common"
+	"github.com/ygpkg/gooxml/schema/soo/sml"
+	"github.com/ygpkg/gooxml/vmldrawing"
 )
 
 // Sheet is a single sheet within a workbook.

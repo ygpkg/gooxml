@@ -8,8 +8,8 @@
 package document
 
 import (
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/schema/soo/wml"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/schema/soo/wml"
 )
 
 // NumberingLevel is the definition for numbering for a particular level within

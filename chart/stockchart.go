@@ -8,8 +8,8 @@
 package chart
 
 import (
-	"github.com/clearmann/gooxml"
-	crt "github.com/clearmann/gooxml/schema/soo/dml/chart"
+	"github.com/ygpkg/gooxml"
+	crt "github.com/ygpkg/gooxml/schema/soo/dml/chart"
 )
 
 // StockChart is a 2D Stock chart.

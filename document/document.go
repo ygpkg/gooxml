@@ -19,16 +19,16 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/color"
-	"github.com/clearmann/gooxml/common"
-	"github.com/clearmann/gooxml/measurement"
-	"github.com/clearmann/gooxml/zippkg"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/color"
+	"github.com/ygpkg/gooxml/common"
+	"github.com/ygpkg/gooxml/measurement"
+	"github.com/ygpkg/gooxml/zippkg"
 
-	"github.com/clearmann/gooxml/schema/soo/dml"
-	st "github.com/clearmann/gooxml/schema/soo/ofc/sharedTypes"
-	"github.com/clearmann/gooxml/schema/soo/pkg/relationships"
-	"github.com/clearmann/gooxml/schema/soo/wml"
+	"github.com/ygpkg/gooxml/schema/soo/dml"
+	st "github.com/ygpkg/gooxml/schema/soo/ofc/sharedTypes"
+	"github.com/ygpkg/gooxml/schema/soo/pkg/relationships"
+	"github.com/ygpkg/gooxml/schema/soo/wml"
 )
 
 // Document is a text document that can be written out in the OOXML .docx

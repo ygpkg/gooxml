@@ -7,7 +7,7 @@
 
 package spreadsheet
 
-import "github.com/clearmann/gooxml/schema/soo/sml"
+import "github.com/ygpkg/gooxml/schema/soo/sml"
 
 type DifferentialStyle struct {
 	x   *sml.CT_Dxf

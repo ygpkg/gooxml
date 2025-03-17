@@ -13,10 +13,10 @@ import (
 	"encoding/xml"
 	"strconv"
 
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/schema/urn/schemas_microsoft_com/office/excel"
-	"github.com/clearmann/gooxml/schema/urn/schemas_microsoft_com/office/powerpoint"
-	"github.com/clearmann/gooxml/schema/urn/schemas_microsoft_com/office/word"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/schema/urn/schemas_microsoft_com/office/excel"
+	"github.com/ygpkg/gooxml/schema/urn/schemas_microsoft_com/office/powerpoint"
+	"github.com/ygpkg/gooxml/schema/urn/schemas_microsoft_com/office/word"
 )
 
 type Line struct {

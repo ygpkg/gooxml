@@ -21,7 +21,7 @@ spreadsheet.Workbook and presentation.Presentation), the other wrapper types are
 value types with non-pointer methods.  They exist solely to modify and return
 data from one or more XML types.
 
-The packages of interest are github.com/clearmann/gooxml/document,
-baliance/gooxml/spreadsheet and github.com/clearmann/gooxml/presentation.
+The packages of interest are github.com/ygpkg/gooxml/document,
+baliance/gooxml/spreadsheet and github.com/ygpkg/gooxml/presentation.
 */
-package gooxml // import "github.com/clearmann/gooxml"
+package gooxml // import "github.com/ygpkg/gooxml"

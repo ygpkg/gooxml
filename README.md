@@ -16,7 +16,7 @@ library for creation and editing of docx/xlsx/pptx files.
 Requires **go1.8+**, builds are tested with 1.8, 1.9 and tip.
 
 [![Build Status](https://travis-ci.org/baliance/gooxml.svg?branch=master)](https://travis-ci.org/baliance/gooxml)
-[![GitHub (pre-)release](https://img.shields.io/github/release/baliance/gooxml/all.svg)](https://github.com/clearmann/gooxml/releases)
+[![GitHub (pre-)release](https://img.shields.io/github/release/baliance/gooxml/all.svg)](https://github.com/ygpkg/gooxml/releases)
 [![License: AGPL v3](https://img.shields.io/badge/License-Dual%20AGPL%20v3/Commercial-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![GoDoc](https://godoc.org/baliance.com/gooxml?status.svg)](https://godoc.org/baliance.com/gooxml)
 [![go 1.8+](https://img.shields.io/badge/go-1.8%2B-blue.svg)](http://golang.org)
@@ -47,7 +47,7 @@ Requires **go1.8+**, builds are tested with 1.8, 1.9 and tip.
 
 There has been a great deal of interest in performance numbers for spreadsheet
 creation/reading lately, so here are gooxml numbers for this
-[benchmark](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/lots-of-rows)
+[benchmark](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/lots-of-rows)
 which creates a sheet with 30k rows, each with 100 columns.
 
     creating 30000 rows * 100 cells took 3.92506863s
@@ -61,40 +61,40 @@ DOCX/XLSX/PPTX.
 
 ## Installation ##
 
-    go get github.com/clearmann/gooxml
+    go get github.com/ygpkg/gooxml
 
 ## Docx 文档示例 ##
 
-- [简单文本格式](https://github.com/clearmann/gooxml/tree/master/_examples/document/simple) 文本字体颜色、大小、高亮显示等
-- [自动生成目录](https://github.com/clearmann/gooxml/tree/master/_examples/document/toc) 创建文档标题，并基于标题自动生成目录
-- [图像处理](https://github.com/clearmann/gooxml/tree/master/_examples/document/image) 在页面上绝对定位图像，支持不同文字环绕方式
-- [页眉页脚](https://github.com/clearmann/gooxml/tree/master/_examples/document/header-footer) 创建包含页码的页眉和页脚
-- [多重页眉页脚](https://github.com/clearmann/gooxml/tree/master/_examples/document/header-footer-multiple) 根据文档章节使用不同的页眉页脚
-- [内联表格](https://github.com/clearmann/gooxml/tree/master/_examples/document/tables) 添加带边框和不带边框的表格
-- [使用现有Word文档作为模板](https://github.com/clearmann/gooxml/tree/master/_examples/document/use-template) 打开文档作为模板以复用其中的样式
-- [填写表单字段](https://github.com/clearmann/gooxml/tree/master/_examples/document/fill-out-form) 打开包含嵌入式表单字段的文档，填写字段并将结果另存为已填写的新表单
-- [编辑现有文档](https://github.com/clearmann/gooxml/tree/master/_examples/document/edit-document) 打开现有文档并替换/删除文本，同时保持原有格式不变
+- [简单文本格式](https://github.com/ygpkg/gooxml/tree/master/_examples/document/simple) 文本字体颜色、大小、高亮显示等
+- [自动生成目录](https://github.com/ygpkg/gooxml/tree/master/_examples/document/toc) 创建文档标题，并基于标题自动生成目录
+- [图像处理](https://github.com/ygpkg/gooxml/tree/master/_examples/document/image) 在页面上绝对定位图像，支持不同文字环绕方式
+- [页眉页脚](https://github.com/ygpkg/gooxml/tree/master/_examples/document/header-footer) 创建包含页码的页眉和页脚
+- [多重页眉页脚](https://github.com/ygpkg/gooxml/tree/master/_examples/document/header-footer-multiple) 根据文档章节使用不同的页眉页脚
+- [内联表格](https://github.com/ygpkg/gooxml/tree/master/_examples/document/tables) 添加带边框和不带边框的表格
+- [使用现有Word文档作为模板](https://github.com/ygpkg/gooxml/tree/master/_examples/document/use-template) 打开文档作为模板以复用其中的样式
+- [填写表单字段](https://github.com/ygpkg/gooxml/tree/master/_examples/document/fill-out-form) 打开包含嵌入式表单字段的文档，填写字段并将结果另存为已填写的新表单
+- [编辑现有文档](https://github.com/ygpkg/gooxml/tree/master/_examples/document/edit-document) 打开现有文档并替换/删除文本，同时保持原有格式不变
 
 ## Excel 文档示例 ##
-- [简单excel表格](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/simple) 包含少量单元格的简单工作表
-- [命名单元格](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/named-cells) 行列和单元格的不同引用方式
-- [数字/日期/时间格式](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/number-date-time-formats) 设置多种数字/日期/时间格式的单元格
-- [折线图](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/line-chart)/[3D折线图](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/line-chart-3d) 折线图绘制示例
-- [柱状图](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/bar-chart) 柱状图绘制示例
-- [多图表布局](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/multiple-charts) 单工作表中创建多个图表
-- [命名单元格区域](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/named-ranges) 定义单元格区域名称
-- [合并单元格](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/merged) 合并与取消合并单元格
-- [条件格式](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/conditional-formatting) 条件格式设置（样式/渐变色/图标集/数据条）
-- [综合应用](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/complex) 多图表、自动筛选与条件格式的组合应用
-- [单元格边框](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/borders) 单个单元格边框和单元格区域矩形边框设置
-- [数据验证](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/validation) 包含组合框下拉列表的数据验证
-- [冻结行列](https://github.com/clearmann/gooxml/tree/master/_examples/spreadsheet/freeze-rows-cols) 冻结表头行和列的视图设置
+- [简单excel表格](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/simple) 包含少量单元格的简单工作表
+- [命名单元格](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/named-cells) 行列和单元格的不同引用方式
+- [数字/日期/时间格式](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/number-date-time-formats) 设置多种数字/日期/时间格式的单元格
+- [折线图](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/line-chart)/[3D折线图](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/line-chart-3d) 折线图绘制示例
+- [柱状图](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/bar-chart) 柱状图绘制示例
+- [多图表布局](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/multiple-charts) 单工作表中创建多个图表
+- [命名单元格区域](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/named-ranges) 定义单元格区域名称
+- [合并单元格](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/merged) 合并与取消合并单元格
+- [条件格式](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/conditional-formatting) 条件格式设置（样式/渐变色/图标集/数据条）
+- [综合应用](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/complex) 多图表、自动筛选与条件格式的组合应用
+- [单元格边框](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/borders) 单个单元格边框和单元格区域矩形边框设置
+- [数据验证](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/validation) 包含组合框下拉列表的数据验证
+- [冻结行列](https://github.com/ygpkg/gooxml/tree/master/_examples/spreadsheet/freeze-rows-cols) 冻结表头行和列的视图设置
 
 ## Presentation Examples ##
 
-- [Simple Text Boxes](https://github.com/clearmann/gooxml/tree/master/_examples/presentation/simple) Simple text boxes and shapes
-- [Images](https://github.com/clearmann/gooxml/tree/master/_examples/presentation/image) Simple image insertion
-- [Template](https://github.com/clearmann/gooxml/tree/master/_examples/presentation/use-template/simple) Creating a presentation from a template
+- [Simple Text Boxes](https://github.com/ygpkg/gooxml/tree/master/_examples/presentation/simple) Simple text boxes and shapes
+- [Images](https://github.com/ygpkg/gooxml/tree/master/_examples/presentation/image) Simple image insertion
+- [Template](https://github.com/ygpkg/gooxml/tree/master/_examples/presentation/use-template/simple) Creating a presentation from a template
 
 ## Raw Types ##
 

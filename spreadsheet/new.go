@@ -10,9 +10,9 @@ package spreadsheet
 import (
 	"runtime"
 
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/common"
-	"github.com/clearmann/gooxml/schema/soo/sml"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/common"
+	"github.com/ygpkg/gooxml/schema/soo/sml"
 )
 
 // New constructs a new workbook.

@@ -7,7 +7,7 @@
 
 package document
 
-import "github.com/clearmann/gooxml/schema/soo/wml"
+import "github.com/ygpkg/gooxml/schema/soo/wml"
 
 // StructuredDocumentTag are a tagged bit of content in a document.
 type StructuredDocumentTag struct {

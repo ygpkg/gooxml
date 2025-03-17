@@ -12,7 +12,7 @@ package format
 import (
 	"io"
 
-	"github.com/clearmann/gooxml"
+	"github.com/ygpkg/gooxml"
 )
 
 //line lexer.go:20

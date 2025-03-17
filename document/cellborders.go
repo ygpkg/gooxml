@@ -8,9 +8,9 @@
 package document
 
 import (
-	"github.com/clearmann/gooxml/color"
-	"github.com/clearmann/gooxml/measurement"
-	"github.com/clearmann/gooxml/schema/soo/wml"
+	"github.com/ygpkg/gooxml/color"
+	"github.com/ygpkg/gooxml/measurement"
+	"github.com/ygpkg/gooxml/schema/soo/wml"
 )
 
 // CellBorders are the borders for an individual

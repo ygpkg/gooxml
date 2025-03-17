@@ -2,13 +2,13 @@
 package main
 
 import (
-	"github.com/clearmann/gooxml/color"
-	"github.com/clearmann/gooxml/document"
-	"github.com/clearmann/gooxml/measurement"
-	"github.com/clearmann/gooxml/schema/soo/wml"
+	"github.com/ygpkg/gooxml/color"
+	"github.com/ygpkg/gooxml/document"
+	"github.com/ygpkg/gooxml/measurement"
+	"github.com/ygpkg/gooxml/schema/soo/wml"
 )
 
-// "github.com/clearmann/gooxml/color"
+// "github.com/ygpkg/gooxml/color"
 var lorem = `Lorem ipsum dolor sit amet, Vestibulum t反反复复反反复复凤飞飞发发发344444444444444444444444444444444444442GVvvvvvvvvvvvvvvvvvvv了解覅额黑白 问佛嗯empus sagittis elementum`
 
 func main() {

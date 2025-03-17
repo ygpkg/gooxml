@@ -10,7 +10,7 @@ package spreadsheet_test
 import (
 	"testing"
 
-	"github.com/clearmann/gooxml/spreadsheet"
+	"github.com/ygpkg/gooxml/spreadsheet"
 )
 
 var standardFmtTestData = []struct {

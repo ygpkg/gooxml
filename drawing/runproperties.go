@@ -8,10 +8,10 @@
 package drawing
 
 import (
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/color"
-	"github.com/clearmann/gooxml/measurement"
-	"github.com/clearmann/gooxml/schema/soo/dml"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/color"
+	"github.com/ygpkg/gooxml/measurement"
+	"github.com/ygpkg/gooxml/schema/soo/dml"
 )
 
 // RunProperties controls the run properties.

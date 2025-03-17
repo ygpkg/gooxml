@@ -8,7 +8,7 @@
 package gooxml_test
 
 import "testing"
-import "github.com/clearmann/gooxml"
+import "github.com/ygpkg/gooxml"
 
 func TestWMLFilenames(t *testing.T) {
 	td := []struct {

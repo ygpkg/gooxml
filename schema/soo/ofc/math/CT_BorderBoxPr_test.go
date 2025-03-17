@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/clearmann/gooxml/schema/soo/ofc/math"
+	"github.com/ygpkg/gooxml/schema/soo/ofc/math"
 )
 
 func TestCT_BorderBoxPrConstructor(t *testing.T) {

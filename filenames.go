@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/clearmann/gooxml/algo"
+	"github.com/ygpkg/gooxml/algo"
 )
 
 // Common filenames used in zip packages.

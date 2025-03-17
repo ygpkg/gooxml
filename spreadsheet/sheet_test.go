@@ -13,8 +13,8 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/spreadsheet"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/spreadsheet"
 )
 
 func TestRowNumIncreases(t *testing.T) {

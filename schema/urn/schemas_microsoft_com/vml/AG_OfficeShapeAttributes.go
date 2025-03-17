@@ -14,7 +14,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/clearmann/gooxml/schema/soo/ofc/sharedTypes"
+	"github.com/ygpkg/gooxml/schema/soo/ofc/sharedTypes"
 )
 
 type AG_OfficeShapeAttributes struct {

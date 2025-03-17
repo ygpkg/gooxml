@@ -8,7 +8,7 @@
 package gooxml_test
 
 import "testing"
-import "github.com/clearmann/gooxml"
+import "github.com/ygpkg/gooxml"
 
 func TestOpenSourceLicense(t *testing.T) {
 	gooxml.GetLicense()

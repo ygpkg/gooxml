@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/clearmann/gooxml/spreadsheet"
+	"github.com/ygpkg/gooxml/spreadsheet"
 )
 
 func ExampleSheet_Cell() {

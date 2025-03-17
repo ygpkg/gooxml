@@ -8,9 +8,9 @@
 package presentation
 
 import (
-	"github.com/clearmann/gooxml/drawing"
-	"github.com/clearmann/gooxml/schema/soo/dml"
-	"github.com/clearmann/gooxml/schema/soo/pml"
+	"github.com/ygpkg/gooxml/drawing"
+	"github.com/ygpkg/gooxml/schema/soo/dml"
+	"github.com/ygpkg/gooxml/schema/soo/pml"
 )
 
 // Image is an image within a slide.

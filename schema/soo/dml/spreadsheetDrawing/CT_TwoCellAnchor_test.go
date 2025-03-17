@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/clearmann/gooxml/schema/soo/dml/spreadsheetDrawing"
+	"github.com/ygpkg/gooxml/schema/soo/dml/spreadsheetDrawing"
 )
 
 func TestCT_TwoCellAnchorConstructor(t *testing.T) {

@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/clearmann/gooxml/schema/urn/schemas_microsoft_com/vml"
+	"github.com/ygpkg/gooxml/schema/urn/schemas_microsoft_com/vml"
 )
 
 func TestPolylineConstructor(t *testing.T) {

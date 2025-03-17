@@ -10,10 +10,10 @@ package presentation
 import (
 	"errors"
 
-	"github.com/clearmann/gooxml"
-	"github.com/clearmann/gooxml/drawing"
-	"github.com/clearmann/gooxml/schema/soo/dml"
-	"github.com/clearmann/gooxml/schema/soo/pml"
+	"github.com/ygpkg/gooxml"
+	"github.com/ygpkg/gooxml/drawing"
+	"github.com/ygpkg/gooxml/schema/soo/dml"
+	"github.com/ygpkg/gooxml/schema/soo/pml"
 )
 
 // PlaceHolder is a place holder from a slide.

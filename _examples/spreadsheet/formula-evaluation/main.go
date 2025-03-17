@@ -4,8 +4,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/clearmann/gooxml/spreadsheet"
-	"github.com/clearmann/gooxml/spreadsheet/formula"
+	"github.com/ygpkg/gooxml/spreadsheet"
+	"github.com/ygpkg/gooxml/spreadsheet/formula"
 )
 
 func main() {

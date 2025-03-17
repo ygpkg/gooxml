@@ -13,9 +13,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/clearmann/gooxml"
+	"github.com/ygpkg/gooxml"
 
-	"github.com/clearmann/gooxml/common"
+	"github.com/ygpkg/gooxml/common"
 )
 
 func TestNewAppDefaultProperties(t *testing.T) {
@@ -23,7 +23,7 @@ func TestNewAppDefaultProperties(t *testing.T) {
 	if ap.X() == nil {
 		t.Errorf("expected non-nil internal element")
 	}
-	if got := ap.Application(); got != "github.com/clearmann/gooxml" {
+	if got := ap.Application(); got != "github.com/ygpkg/gooxml" {
 		t.Errorf("unexpected application: %s", got)
 	}
 
