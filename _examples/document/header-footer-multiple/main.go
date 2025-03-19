@@ -97,10 +97,10 @@ func main() {
 		}
 	}
 	setFooter()
-	document.AddIndentedMultilineText(doc, "宋体", lorem, 14)
+	document.AddIndentedMultilineText(doc, "宋体", lorem, 14, 18)
 	setHeader("说  明  书  摘  要")
 	setSection()
-	document.AddIndentedMultilineText(doc, "宋体", lorem, 14)
+	document.AddIndentedMultilineText(doc, "宋体", lorem, 14, 18)
 	setHeader("摘  要  附  图")
 	setSection()
 	len := 3

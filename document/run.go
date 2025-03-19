@@ -107,8 +107,8 @@ func (r Run) AddText(s string) {
 	ic.T.Content = s
 }
 
-// 自带缩进, 遇到\n自动换行,设置字体(样式大小)
-func AddIndentedMultilineText(doc *Document, font string, text string, size int) {
+// 自带缩进, 遇到\n自动换行,设置字体(样式,大小,间距)
+func AddIndentedMultilineText(doc *Document, font string, text string, size int, lineSpaceing int) {
 	lines := strings.Split(text, "\n")
 	for _, line := range lines {
 		if line != "" {
@@ -116,6 +116,7 @@ func AddIndentedMultilineText(doc *Document, font string, text string, size int)
 			// 设置每个新段落的左缩进
 			indent := measurement.Distance(size) * measurement.Point * 2
 			_para.Properties().SetFirstLineIndent(indent)
+			_para.Properties().Spacing().SetLineSpacing(measurement.Distance((lineSpaceing)*measurement.Point), wml.ST_LineSpacingRuleAuto)
 			run := _para.AddRun()
 			run.Properties().SetSize(measurement.Distance(size) * measurement.Point)
 			run.Properties().SetFontFamily(font)
