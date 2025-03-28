@@ -9,12 +9,15 @@ package document
 
 import (
 	"archive/zip"
+	"bytes"
 	"errors"
 	"fmt"
 	"image"
 	"image/jpeg"
 	"io"
 	"io/ioutil"
+	"mime/multipart"
+	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
@@ -287,6 +290,71 @@ func (d *Document) Save(w io.Writer) error {
 		return err
 	}
 	return z.Close()
+}
+
+func getTransformedLatexURL() string {
+	u := os.Getenv("YG_API_URL")
+	if u != "" {
+		return fmt.Sprintf("%s/v1/latex.process_latex", strings.TrimSuffix(u, "/"))
+	}
+	return "https://api.i.yygu.cn/v1/latex.process_latex"
+}
+
+// SaveAndLatexTransform 保存文档并转换Latex格式
+func (d *Document) SaveAndLatexTransform(w io.Writer) (err error) {
+	docBuf := new(bytes.Buffer)
+	err = d.Save(docBuf)
+	if err != nil {
+		return err
+	}
+	defer func() {
+		if err != nil {
+			err = d.Save(w)
+		}
+	}()
+
+	var resp *http.Response
+	resp, err = PostFileReaderRequest(getTransformedLatexURL(), "tmp.doc", docBuf)
+	if err != nil {
+		return err
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return fmt.Errorf("latex transform failed, status code: %d", resp.StatusCode)
+	}
+	_, err = io.Copy(w, resp.Body)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+// PostFileReaderRequest 创建一个文件上传请求
+func PostFileReaderRequest(url, fileName string, f io.Reader) (*http.Response, error) {
+	buf := new(bytes.Buffer) // caveat IMO dont use this for large files, \
+	// create a tmpfile and assemble your multipart from there (not tested)
+	w := multipart.NewWriter(buf)
+
+	fw, err := w.CreateFormFile("file", fileName) //这里的file必须和服务器端的FormFile一致
+	if err != nil {
+		return nil, err
+	}
+
+	// Write file field from file to upload
+	_, err = io.Copy(fw, f)
+	if err != nil {
+		return nil, err
+	}
+	// Important if you do not close the multipart writer you will not have a
+	// terminating boundry
+	w.Close()
+
+	req, err := http.NewRequest("POST", url, buf)
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Set("Content-Type", w.FormDataContentType())
+	return http.DefaultClient.Do(req)
 }
 
 // AddTable adds a new table to the document body.
