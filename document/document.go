@@ -314,7 +314,7 @@ func (d *Document) SaveAndLatexTransform(w io.Writer) (err error) {
 	}()
 
 	var resp *http.Response
-	resp, err = PostFileReaderRequest(getTransformedLatexURL(), "tmp.doc", docBuf)
+	resp, err = PostFileReaderRequest(getTransformedLatexURL(), "tmp.docx", docBuf)
 	if err != nil {
 		return err
 	}
