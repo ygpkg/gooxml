@@ -297,7 +297,7 @@ func getTransformedLatexURL() string {
 	if u != "" {
 		return fmt.Sprintf("%s/v1/latex.process_latex", strings.TrimSuffix(u, "/"))
 	}
-	return "https://api.i.yygu.cn/v1/latex.process_latex"
+	return "https://api.yygu.cn/v1/latex.process_latex"
 }
 
 // SaveAndLatexTransform 保存文档并转换Latex格式
